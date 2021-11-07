@@ -1,0 +1,175 @@
+# Use custom format
+add_newline = false
+format = """
+[┌─────── ](bold green)$username$singularity$kubernetes$directory\
+$shlvl\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$cobol\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$cmd_duration\
+$jobs\
+$status
+[│ ](bold green)$hostname$shell | $memory_usage | $time
+[└─](bold green)$character\
+"""
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Inserts a blank line between shell prompts
+
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[>](bold green)"     # The "success_symbol" segment is being set to ">" with the color "bold green"
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[V](bold green) "
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+truncation_symbol = "…/"
+format = "in [$path]($style)[$read_only]($read_only_style) "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](bold red) "
+trim_at = ".companyname.com"
+disabled = false
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+disabled = false
+threshold = -1
+style = "bold green"
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shell]
+fish_indicator = ""
+powershell_indicator = "_"
+unknown_indicator = "mystery shell"
+format = "with $indicator"
+disabled = false
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[time]
+disabled = false
+use_12hr = true
+time_format = "%r"
+format = ' [\[$time\]]($style) '
+
+[username]
+style_user = "blue bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+
